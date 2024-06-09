@@ -4,7 +4,7 @@ import pyperclip
 
 tk=Tk()
 tk.geometry('300x300')
-tk.configure(background='light green')
+tk.configure(background='#0d1d2b')
 
 pswd=StringVar()
 passlen=IntVar()
@@ -23,8 +23,8 @@ def copyclipboard():
     pyperclip.copy(random_password)
     Label(tk,text="Copied to Clipboard",bg="red").pack(pady=6)
 
-Label(tk, text="Strong Password Generator", font="Courier 12 bold",bg='green',fg='white').pack()
-Label(tk, text="Enter your desired  length of password\n(Minimum length should be 4)",font="Courier 8 bold",bg='green',fg='white').pack(pady=3)
+Label(tk, text="Strong Password Generator", font="Courier 12 bold",bg='#ffb3ca',fg='black').pack()
+Label(tk, text="Enter your desired  length of password\n(Minimum length should be 6)",font="Courier 8 bold",bg='#ffb3ca',fg='black').pack(pady=3)
 Entry(tk, textvariable=passlen).pack(pady=6)
 Button(tk, text="Generate Password", command=password_generator,bg='light blue',fg='black').pack(pady=7)
 Entry(tk, textvariable=pswd).pack(pady=6)
